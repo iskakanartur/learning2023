@@ -74,6 +74,14 @@ values ('Max Schwarz', 'Պլյոնդրակ եվ Փողինձ ԱՁ', 'Hi, I like 
 
 ALTER TABLE employers alter column yearly_revenue set data type float ; 
 
-ALTER TABLE conversation alter column date_sent 
-set data type timestamp DEFAULT current_timestamp ; 
+ 
+ALTER TABLE conversation ALTER column  date_sent 
+set default current_timestamp;
 
+INSERT INTO conversation (user_name, employer_name, message)
+values ('Մռավյան Մանուկ Վասպուրի', 'Շուն եվ Շան որդի ԱՁ', 'Էս խիա ոռս քոր գալի');
+
+INSERT INTO conversation (user_name, employer_name, message)
+values ('Ավեդիքյան Սեվադա Բեհզեբուղի', 'Շիշ հվաքողների միութոյւն', 'Չիշիկ ունեմ բայց շատ չի');
+
+SELECT * FROM conversation; 
