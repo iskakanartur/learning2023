@@ -74,9 +74,14 @@ values ('Max Schwarz', 'Պլյոնդրակ եվ Փողինձ ԱՁ', 'Hi, I like 
 
 ALTER TABLE employers alter column yearly_revenue set data type float ; 
 
+ALTER table users alter column full_name set NOT NULL ; 
+ALTER table users alter column current_status set NOT NULL ;
  
 ALTER TABLE conversation ALTER column  date_sent 
 set default current_timestamp;
+
+ALTER table employers alter column is_hiring
+set default FALSE;
 
 INSERT INTO conversation (user_name, employer_name, message)
 values ('Մռավյան Մանուկ Վասպուրի', 'Շուն եվ Շան որդի ԱՁ', 'Էս խիա ոռս քոր գալի');
@@ -84,4 +89,9 @@ values ('Մռավյան Մանուկ Վասպուրի', 'Շուն եվ Շան ո
 INSERT INTO conversation (user_name, employer_name, message)
 values ('Ավեդիքյան Սեվադա Բեհզեբուղի', 'Շիշ հվաքողների միութոյւն', 'Չիշիկ ունեմ բայց շատ չի');
 
+INSERT INTO employers (company_name,  company_address, yearly_revenue)
+values ('Շիշ հվաքողների միութոյւն', 'Սղլիկ Նրբանցք 15', 0.34); 
+
 SELECT * FROM conversation; 
+SELECT * FROM employers; 
+
