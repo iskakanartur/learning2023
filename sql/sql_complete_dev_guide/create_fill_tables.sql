@@ -246,3 +246,5 @@ select * from sales where date_created BETWEEN '2011-11-02' and '2022-05-01';
 select * from sales; 
 
 ----------------------- WORKING WITH DATE and TIME DIFFERENCES ----------------------------
+drop DATABASE if EXISTS onshop; 
+
