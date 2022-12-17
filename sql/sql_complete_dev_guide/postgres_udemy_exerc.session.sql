@@ -32,5 +32,4 @@ add constraint amount_instock_positive check (amount_instock > 0);
 ----- Add auto increment id
 ALTER table products add column id serial primary key;
 
-
-
+drop DATABASE if EXISTS onshop; 
