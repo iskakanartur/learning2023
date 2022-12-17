@@ -19,6 +19,16 @@
             "name": "postgres_udemy",
             "database": "talently",
             "username": "postgres"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "name": "postgres_udemy_exerc",
+            "database": "onshop",
+            "username": "postgres"
         }
     ]
 }
